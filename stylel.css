@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;   
+}
+body{
+    padding: 10px;
+    border-radius: 5px;
+    background: url('wallpaper.webp');
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.box{
+ 
+    /* margin:auto; */
+    /* margin-top: 200px; */
+   
+    border-radius: 5px;
+    width: 600px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+  	
+	margin: auto;
+   
+}
+.web{
+    width: 100%;
+    padding: 7px;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 12px;
+    /* margin-right: 25px; */
+    text-align: center;
+    /* margin: auto; */
+}
+.web1{
+    width: 100%;
+    background-color: cyan;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;padding: 5px;
+}
+#showData {
+    position: absolute;
+    top: 85%;
+    left: 30%;
+    font-family: 'Baloo Tamma 2', cursive;
+    line-height: 20px;
+    letter-spacing: 2px;
+    font-size: 20px;
+    color: white;
+   
+}
+ 
+
+@media only screen and (max-width:425px){
+    
+    .box{
+       flex-direction: column;
+    }
+    h1.text-center.font-weight-bold.text-uppercase {
+        padding: 18px;
+        margin-bottom: 45%;
+        font-size: 50px;
+        color: white;
+    }
+    .web {
+        padding: 10px;
+        border-radius: 5px;
+        margin: 16px;
+        font-size: 35px;
+    }
+    input.web1 {
+        font-size: 35px;
+        font-weight: bold;
+        padding: 10px;
+        margin-left: 10px;
+    }
+    #showData {
+        position: absolute;
+        top: 144%;
+        left: 20%;
+        font-family: 'Baloo Tamma 2', cursive;
+        line-height: 30px;
+        letter-spacing: 2px;
+        font-size: 30px;
+        color: white;
+        width: 154%;
+    }
+   
+}

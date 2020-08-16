@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grade Calculator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylel.css">
+
+
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="gradebox">
+            <div class="box">
+                <div class="col-lg-6 col-md-6 col-sm-12 ">
+                    <h1 class="text-center font-weight-bold text-uppercase ">Student Grade Calcy</h1>
+                </div>
+    
+    
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <form>
+                        <input type="text" class="web" placeholder="WEB PROGRAMMIN" id="web">
+                        <input type="text" class="web" id="math" placeholder="MATHMATICS">
+                        <input type="text" class="web" id="physics" placeholder="PHYSICS">
+                        <input type="text" class="web" id="computer" placeholder="COMPUTER">
+                        <input type="button" class="web1" name="button" value="showPercentage" onclick="calcy()">
+                    </form>
+                </div>
+            </div>
+    
+            <div class="appp-form-group showdata">
+                <p id="showData" class="text-center"></p>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+        function calcy() {
+            let web = document.getElementById("web").value;
+            let math = document.getElementById('math').value;
+            let physics = document.getElementById('physics').value;
+            let computer = document.getElementById('computer').value;
+            let grades = "";
+
+           let totalgrades = parseFloat(web) + parseFloat(math) + parseFloat(physics) + parseFloat(computer);
+            let percent = totalgrades / 4;//totalgrades/400)*100
+          
+            if (percent >= 80 && percent <= 100) {
+                grades = 'A';
+            }
+            else if (percent >= 60 && percent <= 79) {
+                grades = 'B';
+            }
+            else if (percent >= 40 && percent <= 59) {
+                grades = 'C';
+            }
+            else {
+                grades = 'F';
+            }
+
+            if (percent >= 39.5) {
+                document.getElementById('showData').innerHTML = `Out of 400 Total is ${totalgrades} 
+                and percentage is ${percent}%.<br> your grade is ${grades}. You are Pass`;
+
+            }
+            else {
+
+                document.getElementById('showData').innerHTML = `Out of 400 Total is ${totalgrades} 
+                and percentage is ${percent}%.<br> your grade is ${grades}.You are fail`;
+            }
+
+
+        }
+
+    </script>
+
+
+
+
+    <!-- <script src="script.js"></script> -->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+
+</body>
+
+</html>
